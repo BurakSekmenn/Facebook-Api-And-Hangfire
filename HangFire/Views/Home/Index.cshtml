@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<form asp-action="ScheduleFacebookPost" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="message">Metin :</label>
+        <textarea class="form-control" rows="10" id="message" name="message"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="photoUrls">Resim URL'leri (virgülle ayırarak):</label>
+        <input type="text" id="photoUrls" name="photoUrls" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="scheduledTime">Planlanan Zaman:</label>
+        <input type="datetime-local" id="scheduledTime" name="scheduledTime" class="form-control" />
+    </div>
+
+
+    <button type="submit" class="btn btn-success">Gönder</button>
+</form>
